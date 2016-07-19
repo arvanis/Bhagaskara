@@ -1,0 +1,243 @@
+.team {
+    width: 100%;
+    @extend %flexibility;
+    align-items: center;
+    justify-content: center;
+    
+    .main_width {
+        @extend %flexibility;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    #left, #right {
+        background-image: url("../images/Bhagaskara-PS5_03grey.png");
+        color: $mainColor;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        align-items: center;
+        justify-content: center;
+        font-family: "Lato", sans-serif;
+        display: inline-flex;
+        
+        &:hover {
+            background-image: url("../images/Bhagaskara-PS5_03purp.png");
+            color: $secColor;
+        }
+    }
+    
+    .viewer {
+        overflow: hidden;
+        left:0;
+        right: 0;
+        margin: auto;
+    }
+    
+    .squad {
+        display: inline-flex;
+    }
+    
+    h2, p {
+        color: $mainColor;
+        font-family: "Lato", sans-serif;
+    }
+    
+    .social {
+        border-radius: 50%;
+        border: 1px solid $mainColor;
+        font-family: "Lato", sans-serif;
+        color: $mainColor;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        
+        &:hover {
+            color: $secColor;
+            border: 1px solid $secColor;
+        }     
+    }
+}
+
+
+// Dla telefonów komórkowych
+
+@media only screen and (max-width: $mobile) {
+    .team {
+        padding-top: 10vw;
+        
+        .headings {
+        height: 24vw;
+        width: 61vw;
+        margin: 0 auto 10vw auto;
+            
+            div:first-child {
+                font-size: 12vw;
+                padding: 3vw;
+            }
+            
+            div:nth-child(2) {
+                top: 2vw;
+                right: 0;
+                width: 7vw;
+                height: 7vw;
+            }
+            
+            div:last-child {
+                bottom: 1vw;
+                left: 0;
+                width: 7vw;
+                height: 7vw;
+            } 
+        }
+        
+        #left, #right {
+            width: 20vw;
+            height: 20vw;
+            font-size: 15vw;
+        
+            &:hover {
+                background-image: url("../images/Bhagaskara-PS5_03purp.png");
+                color: $secColor;
+            }
+        }
+        
+        .viewer {
+            width: 80vw;
+            height: 120vw;
+            margin-bottom: 5vw; 
+        }
+        
+        .squad {
+            width: 240vw;
+        }
+        
+        #member1, #member2, #member3 {
+            width: 80vw;
+                text-align: center;
+            
+            h2 {
+                font-size: 6vw;
+                text-transform: uppercase;
+                margin-bottom: 3vw;
+            }
+            
+            p {
+                font-size: 5vw;
+            }
+        }
+
+        .photo {
+            width: 50vw;
+            height: 50vw;
+            margin: 10vw auto;
+        }
+        
+        .social {
+            width: 20vw;
+            height: 20vw;
+            font-size: 8vw;
+            margin: 4vw;
+        }
+    } 
+}
+
+
+// Dla tabletów
+
+@media only screen and (min-width: $mobile + 1px) and (max-width: $tablet) {
+    .team {
+        padding-top: 10vw;
+        
+        .main_width {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .headings {
+            display: block;
+            height: 10vw;
+            width: 26vw;
+            margin: 0 auto 2vw auto;
+            font-size: 5vw;
+                
+            div:first-child {
+                font-size: 5vw;
+                padding: 2.5vw 2vw;
+            }
+            
+            div:nth-child(2) {
+                border-top: 1px solid $secColor;
+                border-right: 1px solid $secColor;
+                position: absolute;
+                top: 1vw;
+                right: 0;
+                width: 2vw;
+                height: 2vw;
+            }
+            
+            div:last-child {
+                border-left: 1px solid $secColor;
+                border-bottom: 1px solid $secColor;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 2vw;
+                height: 2vw;
+            } 
+        }  
+        
+        #left, #right {
+            width: 7vw;
+            height: 7vw;
+            font-size: 5vw;
+            margin: 3vw;
+        
+            &:hover {
+                background-image: url("../images/Bhagaskara-PS5_03purp.png");
+                color: $secColor;
+            }
+        }
+        
+        .viewer {
+            width: 100vw;
+            height: 50vw;
+            margin-bottom: 5vw; 
+        }
+        
+        .squad {
+            width: 100vw;
+            justify-content: space-around;
+        }
+        
+        #member1, #member2, #member3 {
+            width: 30vw;
+                text-align: center;
+            
+            h2 {
+                font-size: 2vw;
+                text-transform: uppercase;
+                margin-bottom: 1vw;
+            }
+            
+            p {
+                font-size: 1.5vw;
+            }
+        }
+
+        .photo {
+            width: 20vw;
+            height: 20vw;
+            margin: 5vw auto;
+        }
+        
+        .social {
+            width: 5vw;
+            height: 5vw;
+            font-size: 2vw;
+            margin: 1vw;
+        }
+    }
+}

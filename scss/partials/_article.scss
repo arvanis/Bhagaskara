@@ -1,0 +1,186 @@
+article {
+    @extend %flexibility;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(242, 242, 242)
+}
+
+.boxes {
+    .hexagon {
+        background-image: url("../images/Bhagaskara-PS5_03grey.png");
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @extend %flexibility;
+        
+        @for $i from 1 through 4 {
+            .hexPic-#{$i} {
+                background-image: url("../images/hexPic" + $i + ".png");
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    
+    h3, p {
+        font-family: "Lato", sans-serif;
+        color: rgb(103, 103, 103);
+    }
+}
+
+
+.boxes:hover {
+    .hexagon {
+        background-image: url("../images/Bhagaskara-PS5_03purp.png");
+        
+        @for $i from 1 through 4 {
+            .hexPic-#{$i} {
+                background-image: url("../images/hexPicPurp" + $i + ".png");
+            }
+        }
+    }
+}
+
+
+
+
+// Artykuł dla telefonów komórkowych
+
+@media only screen and (max-width: $mobile) {
+    article {
+        .main_width {
+            display: block;
+        }
+        
+        .boxes {
+            text-align: center;
+            margin: 15vw 4vw 20vw 4vw;
+            
+            .hexagon {
+                width: 50vw;
+                height: 50vw;
+                justify-content: center;
+                align-items: center;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                
+                @for $i from 1 through 4 {
+                    .hexPic-#{$i} {
+                        width: 20vw;
+                        height: 20vw;
+                    }
+                }
+            }
+            
+            h3 {
+                margin-top: 4vw;
+                font-size: 8vw;
+                font-weight: 400;
+            }
+            
+            p {
+                margin-top: 8vw;
+                font-size: 5vw;
+                line-height: 9vw;
+            }
+        }
+    }
+}
+
+
+// Artykuł dla tabletów
+
+@media only screen and (min-width: $mobile + 1px) and (max-width: $tablet) {
+    article {
+        height: 60vw;
+        
+        .main_width {
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .boxes {
+            text-align: center;
+            margin: 0 1vw;
+            
+            .hexagon {
+                width: 15vw;
+                height: 15vw;
+                justify-content: center;
+                align-items: center;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                
+                @for $i from 1 through 4 {
+                    .hexPic-#{$i} {
+                        width: 6vw;
+                        height: 6vw;
+                    }
+                }
+            }
+            
+            h3 {
+                margin-top: 2vw;
+                font-size: 2.5vw;
+                font-weight: 400;
+            }
+            
+            p {
+                margin-top: 2vw;
+                font-size: 1.7vw;
+                line-height: 3vw;
+            }
+        }
+    }
+}
+
+
+// Artykuł dla normalnych wyświetlaczy
+
+@media only screen and (min-width: $tablet + 1px) {
+    article {
+        height: 800px;
+        
+        .main_width {
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .boxes {
+            text-align: center;
+            margin: 0 20px;
+            
+            .hexagon {
+                width: 200px;
+                height: 200px;
+                justify-content: center;
+                align-items: center;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                
+                @for $i from 1 through 4 {
+                    .hexPic-#{$i} {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+            }
+            
+            h3 {
+                margin-top: 30px;
+                font-size: 24px;
+                font-weight: 400;
+            }
+            
+            p {
+                margin-top: 30px;
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+    }
+}

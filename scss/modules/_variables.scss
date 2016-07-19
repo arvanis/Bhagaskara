@@ -1,0 +1,15 @@
+$mobile: 630px; // 450px
+$smartphone: 740px;
+$tablet: 1200px;
+
+%flexibility {
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
+    display: flex;
+}
+
+$mainColor: #676767;
+$secColor: rgb(159, 68, 155);
+$secColShadow: darken($secColor, 10%);

@@ -1,0 +1,14 @@
+@import "vendor/reset";              // Reset domyślnego ostylowania
+@import "vendor/stylesheet";         // Czcionki
+@import "modules/variables";         // Zmienne
+@import "partials/main";             // Kluczowe ustawienia globalne
+@import "partials/header";           // Nagłówek
+@import "partials/nav";              // Nawigacja
+@import "partials/article";          // Artykuł   
+@import "partials/aboutUs";          // Sekcja "About us"      
+@import "partials/motto";            // Sekcja "Motto"
+@import "partials/team";             // Sekcja "Team"                             
+@import "partials/skills";           // Sekcja "Skills"   
+@import "partials/slider";           // Sekcja "Slider"
+@import "partials/gallery";          // Galeria
+@import "partials/footer";           // Kontakt i stopka                                                                       

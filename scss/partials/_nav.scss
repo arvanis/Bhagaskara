@@ -1,0 +1,185 @@
+// Nawigacja
+
+nav {
+    @extend %flexibility;
+    width: 100%;
+    justify-content: center;
+
+
+    .main_width > a {
+        text-decoration: none;
+        color: rgb(103, 103, 103);
+        font-family: "existencelight", sans-serif;
+        
+    }
+    
+    span {
+        font-family: "existencelight", sans-serif;
+        color: rgb(159, 68, 155);
+    }
+    
+    .dropdownMenu a {
+        text-decoration: none;
+        color: rgb(103, 103, 103);
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    
+    .dropdownMenu a:hover {
+        color: rgb(159, 68, 155);
+        
+    }  
+}
+
+.show {
+    @media only screen and (max-width: $mobile) {
+        display: block;
+    }
+}
+
+.hide {
+    @media only screen and (max-width: $mobile) {
+        display: none;
+    }
+}
+
+
+// Nawigacja dla telefonów komórkowych
+
+@media only screen and (max-width: $mobile) {
+    nav {
+        height: 15vw;  
+        
+        .main_width {
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1.5vw;
+        }
+        
+        .dropdownMenu {
+            background-color: white;
+            width: 100%;
+            left: 0;
+            z-index: 9999;
+            margin-top: 1vw;
+            box-shadow: 0 6vw 15vw -6vw #111;
+             
+            a {
+//                box-shadow: 0 12px 15px -4px rgba(200, 200, 200, 0.5) inset, 0 -12px 8px -4px rgba(200, 200, 200, 0.5) inset;
+                font-size: 8vw;
+                line-height: 14vw;
+                display: block;
+                text-align: center;
+                border-top: 1px solid rgba(200,200,200,0.25);
+            }
+        }
+    
+        .main_width > a, .main_width > span {
+            font-size: 9vw;
+            font-weight: bold;
+        }
+        
+        .menu {
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            width: 30vw;
+            height: 12vw;
+            justify-content: flex-end;
+        }
+        
+        .menuIcon {
+            color: rgb(103, 103, 103);
+            font-size: 10vw;
+            font-weight: bold;
+//            border: 3px solid rgb(103, 103, 103);
+//            border-radius: 5px;
+            cursor: pointer;
+            padding: 3px;
+        }  
+    } 
+}
+
+
+// Nawigacja dla tabletów
+
+@media only screen and (min-width: $mobile + 1px) and (max-width: $tablet) {
+    nav {
+        height: 5vw;
+        
+        .main_width {
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .main_width > a, .main_width > span {
+            font-size: 3vw;
+            font-weight: bold;
+        }
+        
+        .menuIcon {
+            display: none;
+        }
+        
+        .dropdownMenu {
+            width: 65vw;
+            justify-content: space-between;
+            display: -webkit-box; 
+            display: -moz-box;
+            display: -ms-flexbox;  
+            display: -webkit-flex; 
+            display: flex;
+            
+            a {
+                font-size: 2vw;
+            }
+        }
+    }
+}
+    
+    
+
+// Nawigacja dla normalnych wyświetlaczy
+
+@media only screen and (min-width: $tablet + 1px) {
+    nav {
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;  
+        display: -webkit-flex; 
+        display: flex;
+        justify-content: center;
+        height: 145px;
+        
+        .main_width {
+            align-items: center;
+        }
+        
+        .menuIcon {
+            display: none;
+        }
+        
+        .main_width > a, .main_width > span {
+            font-size: 26px;
+            font-weight: bold;
+        }
+        
+        .dropdownMenu {
+            width: 750px;
+            justify-content: space-between;
+            display: -webkit-box; 
+            display: -moz-box;
+            display: -ms-flexbox;  
+            display: -webkit-flex; 
+            display: flex;
+            
+            a {
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+}

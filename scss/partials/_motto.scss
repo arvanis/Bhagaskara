@@ -1,0 +1,112 @@
+// parallax background
+
+
+.motto {
+    width: 100%;
+    background-image: url("../images/Bhagaskara_64.png");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    @extend %flexibility;
+    align-items: center;
+    justify-content: center;
+    
+    .main_width {
+        @extend %flexibility;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    p {
+        color: white;
+        font-family: "Lato", sans-serif;
+    }
+}
+
+
+// Dla telefonów komórkowych
+
+@media only screen and (max-width: $mobile) {
+    .motto {
+        padding-top: 15vw;
+
+        .buttonHex {
+            left: 0;
+            right: 0;
+            margin: 10vw auto;
+            width: 50vw;
+            height: 50vw;
+        }
+        
+        img {
+            width: 20vw;
+            height: 16vw;
+        }
+        
+        p {
+            font-size: 6vw;
+            margin-bottom: 25vw;
+            text-align: center;
+        }
+
+    } 
+}
+
+
+
+// Dla tabletów
+
+@media only screen and (min-width: $mobile + 1px) and (max-width: $tablet) {
+    .motto {
+        padding-top: 10vw;
+                
+        .buttonHex {
+            left: 0;
+            right: 0;
+            margin: 5vw auto;
+            width: 15vw;
+            height: 15vw;
+        }
+        
+        img {
+            width: 7vw;
+            height: 5.5vw;
+        }
+        
+        p {
+            font-size: 4vw;
+            margin-bottom: 15vw;
+        }
+
+    } 
+}
+
+
+// Dla normalnych wyświetlaczy 
+
+@media only screen and (min-width: $tablet + 1px) {
+    .motto {
+        padding-top: 125px;
+                
+        .buttonHex {
+            left: 0;
+            right: 0;
+            margin: 0 auto 60px auto;
+            width: 175px;
+            height: 175px;
+        }
+        
+        img {
+            width: 60px;
+            height: 46px;
+        }
+        
+        p {
+            font-size: 42px;
+            margin-bottom: 150px;
+        }
+
+    } 
+    
+}

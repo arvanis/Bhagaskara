@@ -1,0 +1,295 @@
+.aboutUs {
+    @extend %flexibility;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.headings {
+    position: relative;
+    @extend %flexibility;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    
+    div:first-child {
+        font-family: "existencelight", sans-serif;
+        text-align: center;
+        color: $mainColor;
+        font-weight: bold;
+        background-color: white;
+        z-index: 9999;
+        
+        span {
+            color: $secColor;
+        }
+    }
+    
+    div:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    div:last-child {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.infoTxt {
+    font-family: "Lato", sans-serif;
+    color: $mainColor;
+    
+    a {
+        background-color: $secColor;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        
+        &:active {
+            background-color: $secColShadow;
+            box-shadow: 0 0;
+        }
+    }
+}
+
+
+// Dla telefonów komórkowych
+
+@media only screen and (max-width: $mobile) {
+    .aboutUs {
+        padding-top: 10vw;
+        
+        .main_width {
+            display: block;
+        }
+        
+        img {
+            display: none;
+        }
+    }
+    
+        
+    .headings {
+        height: 24vw;
+        width: 60vw;
+        margin: 0 auto 10vw auto;
+            
+        div:first-child {
+            font-size: 12vw;
+            padding: 5vw;
+        }
+        
+        div:nth-child(2) {
+            border-top: 1px solid $secColor;
+            border-right: 1px solid $secColor;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 7vw;
+            height: 7vw;
+        }
+        
+        div:last-child {
+            border-left: 1px solid $secColor;
+            border-bottom: 1px solid $secColor;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 7vw;
+            height: 7vw;
+        } 
+
+    }
+    
+    .infoTxt {
+        padding: 0 10vw;
+        line-height: 8vw;
+        
+        a {
+            display: block;
+            text-align: center;
+            margin: 15vw 10vw 20vw 10vw;
+            padding: 5vw;
+            box-shadow: 0 1vw 0 0 $secColShadow;
+            
+            &:active {
+                background-color: $secColShadow;
+                box-shadow: 0 0;
+                margin-top: 16vw;
+                margin-bottom: 19vw;
+            }
+        }
+    }    
+}
+
+// Dla tabletów
+
+@media only screen and (min-width: $mobile + 1px) and (max-width: $tablet) {
+    .aboutUs {
+        padding-top: 10vw;
+        
+        .main_width {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    .headings {
+        display: block;
+        height: 10vw;
+        width: 26vw;
+        margin: 0 auto 8vw auto;
+        font-size: 5vw;
+            
+        div:first-child {
+            font-size: 5vw;
+            padding: 2.5vw 2vw;
+        }
+        
+        div:nth-child(2) {
+            border-top: 1px solid $secColor;
+            border-right: 1px solid $secColor;
+            position: absolute;
+            top: 1vw;
+            right: 0;
+            width: 2vw;
+            height: 2vw;
+        }
+        
+        div:last-child {
+            border-left: 1px solid $secColor;
+            border-bottom: 1px solid $secColor;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 2vw;
+            height: 2vw;
+        } 
+
+    }
+    
+    .infoTxt {
+        padding: 0 5vw;
+        line-height: 3vw;
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;  
+        display: -webkit-flex; 
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        margin-bottom: 15vw;
+        
+        img {
+            width: 45vw;
+            margin-right: 2vw;
+        }
+        
+        a {
+            display: block;
+            text-align: center;
+            margin: 7vw 20vw 0.5vw 0;
+            padding: 2vw;
+            box-shadow: 0 0.5vw 0 0 $secColShadow;
+            font-size: 1.5vw;
+            
+            &:active {
+                background-color: $secColShadow;
+                box-shadow: 0 0;
+                margin-top: 7.5vw;
+                margin-bottom: 0;
+            }
+        }
+    }    
+}
+
+
+
+// Dla normalnych wyświetlaczy
+
+@media only screen and (min-width: $tablet + 1px) {
+    .aboutUs {
+        padding-top: 100px;
+        
+        .main_width {
+            flex-direction: column;
+        }
+    }
+
+    .headings {
+        display: block;
+        height: 100px;
+        width: 215px;
+        margin: 0 auto 85px auto;
+            
+        div:first-child {
+            font-size: 38px;
+            padding: 31px 10px;
+        }
+        
+        div:nth-child(2) {
+            border-top: 1px solid $secColor;
+            border-right: 1px solid $secColor;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+        }
+        
+        div:last-child {
+            border-left: 1px solid $secColor;
+            border-bottom: 1px solid $secColor;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+        } 
+
+    }
+    
+    .infoTxt {
+        line-height: 30px;
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;  
+        display: -webkit-flex; 
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 200px;
+        
+        img {
+            width: 660px;
+            margin-right: 30px;
+        }
+        
+        div {
+            width: 450px;
+            line-height: 40px;
+        }
+        
+        a {
+            display: block;
+            text-align: center;
+            margin: 100px 0 5px 0;
+            width: 185px;
+            padding: 15px;
+            box-shadow: 0 5px 0 0 $secColShadow;
+            font-size: 18px;
+            
+            &:active {
+                background-color: $secColShadow;
+                box-shadow: 0 0;
+                margin-top: 105px;
+                margin-bottom: 0;
+            }
+        }
+    } 
+}

@@ -1,0 +1,110 @@
+.slider {
+    width: 100%;
+    @extend %flexibility;
+    align-items: center;
+    justify-content: center;
+    font-family: "HelveticaNeueLTStd-Lt", sans-serif;
+    background-color: #EEE;
+    
+    .main_width {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .stats {
+        @extend %flexibility;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+    
+    #slider {
+        #slides {
+            @extend %flexibility;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
+
+// Dla telefonów komórkowych
+
+@media only screen and (max-width: $mobile) {
+    .slider {
+        padding-top: 10vw;
+        
+        .stats {
+            font-size: 15vw;
+            font-weight: 300;
+            margin: 5vw auto;
+            text-align: center;
+            
+            div {
+                margin: 5vw;
+                width: 40vw;
+            }
+            
+            p {
+                font-size: 4vw;
+                color: $mainColor;
+                margin-top: 2vw;
+            }
+        }
+        
+        .photo {
+            width: 30vw;
+            height: 30vw;
+        }
+        
+        
+    }
+    
+    #slider {
+        height: 85vw;
+        width: 80vw;
+        overflow: hidden;
+        left:0;
+        right: 0;
+        margin: auto;
+        
+        #slides {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 480vw;
+            height: 85vw;
+        }
+        
+        .slide {
+            text-align: center;
+            width: 80vw;
+            height: 85vw;
+            
+            .photo {
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+            
+            p {
+                margin-top: 5vw;
+                font-size: 6vw;
+            }
+            
+            h6 {
+                margin: 8vw 0;
+                text-transform: uppercase;
+                font-size: 4vw;
+                font-weight: bold;
+            }
+        }
+    }
+    .control-panel {
+        height: 25vw;
+    }
+}

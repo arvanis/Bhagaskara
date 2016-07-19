@@ -1,0 +1,166 @@
+footer {
+    width: 100%;
+    @extend %flexibility;
+    align-items: center;
+    justify-content: center;
+    font-family: "HelveticaNeueLTStd-Lt", sans-serif;
+    
+    .main_width {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .contact {
+        @extend %flexibility;
+        align-items: center;
+        justify-content: center;
+        
+        input, textarea {
+            font-family: "HelveticaNeueLTStd-Lt", sans-serif;
+            &::-webkit-input-placeholder {
+                font-family: 'myFont', Arial, Helvetica, sans-serif;
+            }
+              
+            &:-ms-input-placeholder {
+                font-family: 'myFont', Arial, Helvetica, sans-serif;
+            }
+              
+            &:-moz-placeholder {
+                font-family: 'myFont', Arial, Helvetica, sans-serif;
+            }
+              
+            &::-moz-placeholder {
+                font-family: 'myFont', Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+    
+    .sendLarge, .sendSmall {
+        color: white;
+        font-family: "Lato", sans-serif;
+        background-color: $secColor;
+        border-radius: 5px;
+    }
+    
+    .socialMedia {
+        @extend %flexibility;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Lato", sans-serif;
+        
+        .social {
+            border-radius: 50%;
+            border: 1px solid black;
+            @extend %flexibility;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+footer + h1 {
+    font-family: "existencelight", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: $mainColor;
+        
+    span {
+        color: rgb(159, 68, 155);
+    }
+}
+
+// Dla telefonów komórkowych
+
+@media only screen and (max-width: $mobile) {
+    footer {
+        padding-top: 10vw;
+        
+        .main-width {
+            width: 100%
+        }
+        
+        .headings {
+        height: 24vw;
+        width: 80vw;
+        margin: 0 auto 10vw auto;
+            
+            div:first-child {
+                font-size: 12vw;
+                padding: 3vw;
+            }
+            
+            div:nth-child(2) {
+                top: 2vw;
+                right: 0;
+                width: 7vw;
+                height: 7vw;
+            }
+            
+            div:last-child {
+                bottom: 1vw;
+                left: 0;
+                width: 7vw;
+                height: 7vw;
+            } 
+        }
+        
+        .contact {
+            flex-direction: column;
+            width: 90vw;
+            
+            input, textarea {
+                width: 90vw;
+                margin-bottom: 2vw;
+                padding: 2vw;
+                font-size: 6vw;
+            }
+        }
+        
+        .sendSmall {
+            width: 40vw;
+            font-size: 5vw;
+            padding: 5vw 0;
+            text-align: center;
+            margin: 10vw 0;
+            box-shadow: 0 1vw 0 0 $secColShadow;
+            
+            &:active {
+                box-shadow: 0 0;
+                margin-top: 11vw;
+                margin-bottom: 9vw;
+            }
+        }
+        
+        .sendLarge {
+            display: none;
+        }
+        
+        .address {
+            font-size: 6vw;
+            line-height: 8vw;
+            
+            p {
+                margin: 6vw 0;
+                font-family: "HelveticaNeueLTStd-Bd", sans-serif;
+                font-size: 4vw;
+            }
+        }
+        
+        .socialMedia {
+            width: 93vw;
+            
+            .social {
+                width: 24vw;
+                height: 24vw;
+                font-size: 10vw;
+            }
+        }
+    }
+    
+    footer + h1 {
+        font-size: 10vw;
+        text-align: center;
+        margin: 10vw 0 3vw 0;
+    }
+}
